@@ -1,0 +1,82 @@
+ul {
+  max-width; 100%;
+  padding: 10px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+/* Make all <li> fit side-by-side within the <ul> */
+li.octocat {
+  display: inline-block;
+  width: 33%;
+}
+
+/* Make <img> centered in <li> container */
+.octocat img {
+  max-width: 300px;
+  border: 1px solid rgb(209,212,216);
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Put a bottom border on the bottom of the image footer */
+.image-footer {
+  border-bottom: 1px solid rgb(209,212,216);
+  padding: .8em;
+  height: 24px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Make the image-number float to the left and align vertically within the div */
+.image-number {
+  float: left;
+  vertical-align: top;
+  color: rgb(181,186,193);
+  font-size: 12px;
+}
+
+/* Dealing with the caption div */
+div.image-caption span, a, ul{
+  vertical-align: top;
+  font-size: 12px;
+}
+
+div.image-caption span {
+  color: rgb(101,109,120);
+}
+
+.image-caption {
+  float: right;
+}
+
+.image-caption a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Dealing with the authors pictures: Took off padding from <ul> and made <li> display inline.
+Note that the pictures of the authors in the 2nd Octocat are not individual <li>s but is one <li>
+with multiple images. Therefore, styling the <li> will not help moves the images next to each other.
+To do that you need to address the actual <a> tag. */
+.authors img {
+  max-height: 20px;
+  height: 100%;
+  width: auto;
+  margin: 0 1px;
+}
+
+ul.authors {
+  padding: 0;
+  display: inline-block;
+}
+
+ul.authors li {
+  float: right;
+}
+
+ul.authors li a {
+  float: left;
+}
