@@ -24,9 +24,25 @@ li.octocat {
 .image-footer {
   border-bottom: 1px solid rgb(209,212,216);
   padding: .8em;
-  height: 24px;
   max-width: 300px;
   margin: 0 auto;
+  position: relative;
+}
+
+.image-footer::after {
+  content: "";
+  clear: both;
+}
+.image-footer::before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border: 8px solid transparent;
+  border-top-color: #cacaca;
+  position: absolute;
+  right: 12px;
+  top: 0;
 }
 
 /* Make the image-number float to the left and align vertically within the div */
@@ -35,6 +51,10 @@ li.octocat {
   vertical-align: top;
   color: rgb(181,186,193);
   font-size: 12px;
+}
+
+.image-number::before {
+  content: "#";
 }
 
 /* Dealing with the caption div */
@@ -48,7 +68,7 @@ div.image-caption span {
 }
 
 .image-caption {
-  float: right;
+  text-align: right;
 }
 
 .image-caption a {
@@ -62,10 +82,13 @@ Note that the pictures of the authors in the 2nd Octocat are not individual <li>
 with multiple images. Therefore, styling the <li> will not help moves the images next to each other.
 To do that you need to address the actual <a> tag. */
 .authors img {
-  max-height: 20px;
-  height: 100%;
-  width: auto;
+  width: 100%;
   margin: 0 1px;
+}
+
+.authors a {
+  width: 30px;
+  display: inline-block;
 }
 
 ul.authors {
