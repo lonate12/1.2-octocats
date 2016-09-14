@@ -9,6 +9,7 @@ ul {
 li.octocat {
   display: inline-block;
   width: 33%;
+  margin-top: 50px;
 }
 
 /* Make <img> centered in <li> container */
