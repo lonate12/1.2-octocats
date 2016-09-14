@@ -7,14 +7,15 @@ ul {
 
 /* Make all <li> fit side-by-side within the <ul> */
 li.octocat {
-  display: inline-block;
-  width: 33%;
-  margin-top: 50px;
+/*  display: inline-block; */
+  float: left;
+  width: 29%;
+  margin: 2% 2% 50px 2%;
 }
 
 /* Make <img> centered in <li> container */
 .octocat img {
-  max-width: 300px;
+  width: 100%;
   border: 1px solid rgb(209,212,216);
   border-radius: 3px;
   display: block;
@@ -24,8 +25,9 @@ li.octocat {
 /* Put a bottom border on the bottom of the image footer */
 .image-footer {
   border-bottom: 1px solid rgb(209,212,216);
-  padding: .8em;
-  max-width: 300px;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -42,7 +44,7 @@ li.octocat {
   border: 8px solid transparent;
   border-top-color: #cacaca;
   position: absolute;
-  right: 12px;
+  right: 5px;
   top: 0;
 }
 
@@ -84,7 +86,7 @@ with multiple images. Therefore, styling the <li> will not help moves the images
 To do that you need to address the actual <a> tag. */
 .authors img {
   width: 100%;
-  margin: 0 1px;
+  margin: 0;
 }
 
 .authors a {
@@ -97,10 +99,18 @@ ul.authors {
   display: inline-block;
 }
 
-ul.authors li {
-  float: right;
+/* Some media quesries to adjust columns */
+
+@media only screen and (max-width: 1000px),
+only screen and (max-device-width: 1000px){
+  li.octocat {
+    width: 46%;
+  }
 }
 
-ul.authors li a {
-  float: left;
+@media only screen and (max-width: 680px),
+only screen and (max-device-width: 680px){
+  li.octocat {
+    width: 96%;
+  }
 }
